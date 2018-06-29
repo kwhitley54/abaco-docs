@@ -2,29 +2,25 @@
 Welcome to Abaco
 ================
 
-.. role:: redbold
-
-.. attention:: 
-    This :ref:`welcome` is only a **sample** page :redbold:`it is not the official page`.
-    
-    This page is still under :redbold:`unconstruction`.
-    
    
 What is Abaco
---------------
+_____________
     
-**Abaco** is a web service and distributed sysytem that implements the actor model of concurrent computation whereby each actor registed in the system is associated with the Docker images.
+**Abaco** is an NSF-funded web service and distributed computing platform providing funcations-as-a-service (FaaS)
+to the research computing community. Abaco implements functions using the Actor Model of concurrent computation. In
+Abaco, each actor is associated with a Docker image, and actor containers are executed in response to messages posted
+to their inbox which itself is given by a URI exposed over HTTP.
 
-Actor containers are executed in response to a message posted to their inbox which itself is given by a URI exposed via abaco.
-
-Three main things are collected  in the process of excecting a actor container:
+Abaco will ultimately offer three primary higher-level capabilities on top of the underlying Actor model:
  
- * States
- * Logs
- * Statistics
+ * *Reactors* for event-driven programming
+ * *Asynchronous Executors* for scaling out function calls within running applications, and
+ * *Data Adapters* for creating rationalized microservices from disparate and heterogeneous sources of data.
+
+Reactors and Asynchronous Executors are available today while Data Adapters are still under active development.
 
 Using Abaco
-_______________
+___________
 
-Abaco is available to researchers and students, to learn more about the the system follow the 
-instructions in :doc:`getting-started/index`. 
+Abaco is in production and has been adopted by several projects. Abaco is available to researchers and students. To
+learn more about the the system, including getting access, follow the instructions in :doc:`getting-started/index`.
