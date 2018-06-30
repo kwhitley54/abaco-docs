@@ -20,7 +20,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'abaco'
+project = 'Abaco'
 copyright = '2018, Texas Advanced Computing Center, University of Texas, Austin'
 author = 'Joe Stubbs, KeDarius Whitley, Julia Looney'
 
