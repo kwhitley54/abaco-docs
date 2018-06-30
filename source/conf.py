@@ -21,8 +21,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'abaco'
-copyright = '2018, Joe Stubbs,KeDarius Whitley'
-author = 'Joe Stubbs,KeDarius Whitley'
+copyright = '2018, Texas Advanced Computing Center, University of Texas, Austin'
+author = 'Joe Stubbs, KeDarius Whitley, Julia Looney'
 
 # The short X.Y version
 version = ''

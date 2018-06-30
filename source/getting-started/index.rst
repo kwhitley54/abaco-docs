@@ -196,7 +196,8 @@ creating images. The instructions within a Dockerfile either add files/folders t
 image, or both.
 
 The FROM instruction
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
+
 we can use the ``FROM`` instruction to start our new image from a known image. This should be the first line of our
 Dockerfile. We will start an official Python image"
 
@@ -205,7 +206,8 @@ Dockerfile. We will start an official Python image"
   FROM python:3.6
 
 The ADD instruction
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
+
 We can add local files to our image using the ``ADD`` instruction. We can add a the file ``example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test`` directory in our container with the following instruction:
 
 .. code-block:: bash
@@ -224,7 +226,7 @@ With that, our ``Dockerfile`` is now ready. This is what is looks like:
 
 .. code-block:: bash
 
-  FROM python
+  FROM python:3.6
 
   ADD example.py /example.py
 
@@ -235,6 +237,7 @@ Now that we have our ``Dockerfile``, we can build our image and push it to Docke
 ``docker build`` and ``docker push`` commands:
 
 .. code-block:: bash
+
   $ docker build -t user/my_actor .
   $ docker push user/my_actor
 
@@ -254,7 +257,7 @@ the actor we want to register through the `body` parameter. For example:
   >>> my_actor = {"image": "user/my_actor", "name": "test", "description": "Actor that counts words."} }
   >>> ag.actors.add(body=my_actor)
   
-To get the message from `Abaco` do the following:
+To get the message from Abaco do the following:
 
 .. code-block:: bash
 
@@ -270,3 +273,14 @@ To get the message from `Abaco` do the following:
         word_count = len(words)
         print('Number of words is: ' + str(word_count))
      string_count()
+
+Executing an Actor
+^^^^^^^^^^^^^^^^^^
+
+We are now ready to execute our actor by sending it a message.
+
+
+Retrieving the Logs
+^^^^^^^^^^^^^^^^^^^
+
+Let's retrieve the logs from the execution we just made.
