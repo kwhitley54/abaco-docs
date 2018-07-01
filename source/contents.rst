@@ -22,6 +22,7 @@ Welcome to Abaco's Documentation!
    technical/context
    technical/messages
    technical/state
+   technical/sharing
 
 
 .. toctree::

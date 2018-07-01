@@ -8,5 +8,5 @@ The Technical Guide for Abaco provides a more detailed reference to Abaco's adva
 - :doc:`messages`: Covers the different types of messages that can be sent to an Actor.
 - :doc:`context`: Full details regarding the context injected into every Abaco actor.
 - :doc:`state`: Working with the State API to store state between actor executions.
-
+- :doc:`sharing`: Sharing actors with other users and using nonces to execute actors.
 
