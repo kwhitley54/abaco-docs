@@ -208,7 +208,7 @@ Dockerfile. We will start an official Python image"
 The ADD instruction
 ~~~~~~~~~~~~~~~~~~~
 
-We can add local files to our image using the ``ADD`` instruction. We can add a the file ``example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test`` directory in our container with the following instruction:
+We can add local files to our image using the ``ADD`` instruction. We can add a the file ``example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test/example.py`` directory in our container with the following instruction:
 
 .. code-block:: bash
 
