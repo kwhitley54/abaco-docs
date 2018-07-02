@@ -279,6 +279,32 @@ Executing an Actor
 
 We are now ready to execute our actor by sending it a message.
 
+To execute a Docker container associated with a reactor, we send the reactor a message by makeing a **POST** request to the reactors' inbox URL which is in the form of:
+
+.. code-block:: bash
+
+ http://api.tacc.utexas.edu/reactors/v2/<reactor_id>/messages
+ 
+Currently, two types of messages are supported: "raw" string and JSON messages.
+
+Executing Reactors with Raw Strings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To excute a reactor passing a raw string, make a **POST** request with a single argument in the message body of `message`.
+Here is an example using curl:
+
+.. code-block:: bash
+
+   $ curl -H "Authorization: Bearer $TOKEN" -d "message=some test message" https://api.tacc.cloud/actors/v2/$REACTOR_ID/messages
+   
+When this request is successful, the reactors service will put a single message on the reactors' message queue which will ultimately result in one container execution with the `$MSG` enviroment variable haiving the value `some test message`.
+
+The same execution could be made using the Python library like so:
+
+.. code-block:: bash
+
+  >>> ag.actors.sendMessage(actorId='NolBaj5y6714M', body={'message': 'test'})
+
 
 Retrieving the Logs
 ^^^^^^^^^^^^^^^^^^^
