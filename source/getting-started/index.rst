@@ -159,6 +159,18 @@ Actors
 
 Now that we going to register a docker container as an actor, to do this we have to an API client and once we have this you only have to do the set up once!
 
+Before we register the docker container, we first want to subscribe to the actor service and we do this by doing the following:
+
+1. Go to http://api.tacc.utexas.edu/store/
+2. Log in with TACC account in upper right hand corner
+3. On the left hand side click on ``Abaco v2``
+4. On the right hand side under ``Applications`` select your client in the drop down list
+5. Select your ``Tier`` (you can choose unlimited)
+6. Click on the ``My Subscriptions`` tab
+7. Under the ``Applications wtih Subscriptions`` select your actor that you subcribe.
+
+Now you should be able to view your the following: **Consumer key**, **Consumer secert**, and **Access token**. you can use these three things to create an actor.
+
 To register a actor using the agavepy library, we use the `actors.add()` method and pass the same arguments through the `body` parameter. For example,
 
 .. code-block:: bash
